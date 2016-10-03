@@ -1,8 +1,5 @@
-package temp;
+package SupertrumpGame;
 
-/**
- * Created by Jack on 5/09/2016.
- */
 public class STCard {
     private int id;
 

@@ -1,4 +1,6 @@
-package temp;
+package SupertrumpGame;
+import javax.swing.*;
+import java.util.Scanner;
 
 public class Main {
 
@@ -6,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
 
         showWelcome();
-        showMenu();
         int opt = getUserMenuChoice();
         STGame game;
         if(opt == NEW_GAME){
@@ -36,20 +37,37 @@ public class Main {
     }
 
     private static int getNumPlayers() {
-        //todo: see prac
-        return 3;
-    }
-    private static int getUserMenuChoice() {
-        //todo: see prac
-        return 1;
-    }
+        int n;
 
-    private static void showMenu(){
-        System.out.println("1. Start Game");
-        System.out.println("2. Exit");
+        Scanner entry = new Scanner(System.in);
+
+        //Loops until user inuts valid number
+        while (true) {
+            System.out.println("How many Players?");
+            n = entry.nextInt();
+
+            if (n <= 2 || n >=6){
+                System.out.println("Invalid number of Players");
+            }
+            else {
+                break;
+            }
+        }
+        return n;
+    }
+    //Checks if user wants to play Mineral Supertrump
+    private static int getUserMenuChoice() {
+        if (JOptionPane.showConfirmDialog(null, "Want to play a Game of Mineral Supertrump?", "Mineral Supertrumps",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            return 1;
+        } else {
+            System.out.println("GoodBye");
+            return 0;
+        }
     }
 
     private static void showWelcome(){
+        //Welcome Message
         System.out.println("Hello");
     }
 }

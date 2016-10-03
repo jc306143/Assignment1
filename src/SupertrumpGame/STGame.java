@@ -1,4 +1,4 @@
-package temp;
+package SupertrumpGame;
 
 import java.util.ArrayList;
 
@@ -14,7 +14,7 @@ public class STGame {
         this.numPlayers = numPlayers;
         deck = new STDeck();
     }
-
+    //randomly Selects a user id to be the dealer
     public void selectDealer() {
         //todo: google how to get random int in java
         //int i = new Random{}.nextInt[2]
@@ -44,13 +44,13 @@ public class STGame {
     }
 
     public void playTheGame() {
-            boolean gameIsOn = true;
-            while(gameIsOn) {
+        boolean gameIsOn = true;
+        while(gameIsOn) {
 
-                //todo: setup players in corret order
-                for (int i = 0; i < players.length; i++){
+            //todo: setup players in corret order
+            for (int i = 0; i < players.length; i++){
 
-                    //todo check humPlayer
+                //todo check humPlayer
             }
 //           showTurnPlayer();
         }

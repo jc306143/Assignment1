@@ -1,10 +1,8 @@
-package temp;
+package SupertrumpGame;
 
 import java.util.ArrayList;
 
-/**
- * Created by Jack on 5/09/2016.
- */
+
 public class STPlayer {
     private ArrayList<STCard> cards;
     private String playerId;
